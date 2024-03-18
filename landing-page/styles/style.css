@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Barlow', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.wrapper{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/*      -----------Banner-----------      */
+
+.banner-img {
+  background-image: url("../images/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  position: relative;
+}
+
+.banner-text {
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+  width: 384px;
+}
+
+.banner-text h3 {
+  font-size: 3.0rem;
+  font-weight: 300;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+.banner-text h6 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #dcfc04;
+  padding: 0.3rem 0;
+  width: 3rem;
+}
+
+.content-wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+
+/*      -----------Nav-----------      */
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+.active {
+  font-weight: 700;
+  color: #000000;
+  text-decoration: underline;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 38rem;
+  list-style-type: none;
+  padding: 1.5rem 0;
+
+}
+
+nav ul li {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #9B9B9B;
+}
+
+nav ul li a:hover {
+  font-weight: 700;
+  color: #000000;
+  text-decoration: underline;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7rem;
+  background-color: rgba(194, 194, 194, 0.1);
+  text-align: center;
+}
+
+.section-title h4 {
+  font-size: 2rem;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+/*      -----------Product Grid-----------      */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2rem;
+  padding: 2rem 0 5rem;
+}
+
+/*      -----------Main Product Image-----------      */
+
+.img-container {
+  width: 100%;
+  position: relative;
+}
+
+.img-container img {
+  width: 100%;
+  filter: contrast(93%);
+}
+
+.new-icon {
+  display: block;
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  font-size: 0.6rem;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #dcfc04;
+  padding: 0.2rem 0;
+  width: 2rem;
+}
+
+/*      -----------Color Varients-----------      */
+
+.color-varient-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.varient-img-container,
+.varient-img-container img {
+  border-radius: 0.3rem;
+}
+
+.varient-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24%;
+  filter: contrast(93%);
+  position: relative;
+}
+
+.varient-img-container img {
+  width: 100%;
+}
+
+.varient-img-container img:hover {
+  border: #000000 solid 1px;
+  cursor: pointer;
+}
+
+.varient-img-container .active {
+  border: #000000 solid 1px;
+  cursor: pointer;
+}
+
+/*      -----------Product Text-----------      */
+
+.grid-item-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid-item-text span {
+  font-size: 0.9rem;
+}
+
+.product-title {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.product-price {
+  text-wrap: nowrap;
+  white-space: nowrap;
+}
+
+/*      -----------Logo-----------      */
+
+footer {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+footer h5 {
+  font-size: 0.9rem;
+  font-weight: 100;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+/*      -----------Media Queries-----------      */
+
+@media only screen and (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-text {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 70%;
+    left: 50%;
+
+    width: 300px;
+  }
+
+  .banner-text h3 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-grid {
+    row-gap: 1rem;
+  }
+}
